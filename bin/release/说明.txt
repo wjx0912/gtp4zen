@@ -1,0 +1,37 @@
+﻿1.把zen7的zen.dll拷贝到gtp4zen.exe所在的文件夹，运行即可，只需要gtp4zen.exe和zen.dll这2个文件
+请参考gtp指令手册(http://www.lysator.liu.se/~gunnar/gtp/)或者使用sabaki等图形界面工具
+
+
+2.gtp4zen.exe所在的文件夹如果存在gtp4zen.lua，命令行-T参数自动失效并使用gtp4zen.lua的时间控制，
+这个脚本用于精细化时间控制，如果不明白用途可以★★删除★★gtp4zen.lua，默认★★文件存在并生效★★
+
+
+3.gtp4zen.exe --help输出帮助,-t是线程数（默认和cpu核数量相同），-T最大思考时间，
+-s最大计算步数，-l指定log文件，-d会输出信息到gtpshell，如下：
+C:\Users\clock\Desktop>gtp4zen.exe --help
+gtp4zen by yongjian(QQ group:14501533, mail:80101277@qq.com)
+www.weiqiba.com(v0.3.3, compile: 2017-11-27 19:10:33)
+Usage: gtp4zen -z 7 -t 4 -T 10 -s 10000 -l mylog.txt -L -d -i 1000
+Options:
+  -h [ --help ]             Show all allowed options.
+  -z [ --zenverion ] arg    Version of zen.dll, must be 6 or 7. (default 7)
+  -t [ --threads ] arg      Set the number of threads to use. (default
+                            CPU_CORES)
+  -T [ --maxtime ] arg      Set the max time for one move. (default 10 seconds)
+  -s [ --strength ] arg     Set the playing strength. (default 10000)
+  -i [ --ithink ] arg       thinking interval, only set 100 when play cgos.
+                            (default 1000ms)
+  -l [ --logfile ] arg      Enable logging and set the log file. (default none)
+  -L [ --logfilenametime ]  Add timestamp after log filename. (default off)
+  -d [ --debug ]            Enable debug output to gtp shell. (default off)
+
+
+4.如果使用zen6的zen.dll，需要设置参数 gtp4zen.exe -z 6
+cgos遛狗建议参数：gtp4zen.exe -T 5 -i 100, 或者使用gtp4zen.lua脚本来控制时间
+
+
+5.有bug请在qq群14501533提出
+
+
+拥剑(qq80101277)
+2017.11.27
