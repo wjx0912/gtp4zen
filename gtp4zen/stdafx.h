@@ -9,7 +9,6 @@
 
 #include <stdio.h>
 #include <tchar.h>
-#include <vld.h>
 
 
 // TODO: reference additional headers your program requires here
